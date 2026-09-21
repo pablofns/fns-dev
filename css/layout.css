@@ -43,8 +43,10 @@
 }
 
 .hud-logo-icon {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 6px;
   color: var(--neon-cyan);
   filter: drop-shadow(0 0 6px var(--neon-cyan));
   animation: float-icon 3s ease-in-out infinite alternate;

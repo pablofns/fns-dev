@@ -58,11 +58,7 @@
   <header class="hud-header">
     <nav class="hud-nav" aria-label="Navegación principal">
       <a href="#hero" class="hud-logo" id="logo-link">
-        <svg class="hud-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-          <polyline points="2 17 12 22 22 17"></polyline>
-          <polyline points="2 12 12 17 22 12"></polyline>
-        </svg>
+        <img src="assets/logos/logo.svg" alt="FNS.DEV Logo" class="hud-logo-icon">
         <span>PABLOFNS<span style="color: var(--neon-cyan)">.DEV</span></span>
       </a>
 
@@ -122,8 +118,8 @@
           </h1>
 
           <p class="hero-subtitle">
-            Construyo experiencias digitales inmersivas que cautivan usuarios y potencian negocios, con código limpio,
-            arquitecturas escalables y diseño vanguardista.
+            Construyo Desarrollador Frontend & Software Engineer | React.js, TypeScript, Node.js, SQL | Creación de
+            interfaces web intuitivas y escalables
           </p>
 
           <div class="hero-cta-group">
@@ -257,7 +253,7 @@
             <h3 class="service-title">Diseño UI/UX &amp; Prototipado</h3>
             <p class="service-desc">
               Diseño centrado en la conversión y la experiencia de usuario. Creación de Design Systems escalables,
-              wireframes y prototipos interactivos en Figma.
+              wireframes y prototipos interactivos.
             </p>
             <ul class="service-list">
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -266,9 +262,6 @@
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg> Prototipos interactivos de alta fidelidad</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Auditorías de usabilidad y accesibilidad</li>
             </ul>
           </div>
 
@@ -281,22 +274,10 @@
                 <polyline points="2 12 12 17 22 12"></polyline>
               </svg>
             </div>
-            <h3 class="service-title">Creative Frontend &amp; 3D</h3>
+            <h3 class="service-title">Creative Frontend</h3>
             <p class="service-desc">
-              Webs interactivas que destacan sobre la competencia: animaciones fluidas a 60 FPS, Canvas 2D/3D con
-              Three.js y micro-interacciones cinematográficas.
+              Webs interactivas con diseños personalizados y animados, a petición del cliente.
             </p>
-            <ul class="service-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Shaders, WebGL y experiencias Three.js</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Transiciones complejas con GSAP/CSS</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Optimización total de GPU y memoria</li>
-            </ul>
           </div>
 
           <!-- Servicio 4 -->
@@ -309,19 +290,12 @@
             </div>
             <h3 class="service-title">Auditoría, Velocidad &amp; SEO</h3>
             <p class="service-desc">
-              Transformación de plataformas lentas en sitios ultrarrápidos. Puntuaciones máximas de Core Web Vitals y
-              arquitectura técnica para posicionamiento orgánico.
+              Sitios más rápidos y mejor posicionados en buscadores.
             </p>
             <ul class="service-list">
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Rendimiento 95+ en Google Lighthouse</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12"></polyline>
                 </svg> SEO semántico y Schema.org estructurado</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Reducción drástica del bundle de JavaScript</li>
             </ul>
           </div>
         </div>
@@ -336,16 +310,15 @@
         <div class="section-tag">PORTFOLIO // TRABAJOS DESTACADOS</div>
         <h2 class="section-title">Proyectos de <span class="gradient-text">Ingeniería &amp; Diseño</span></h2>
         <p class="section-subtitle">
-          Una muestra selecta de arquitecturas de software y aplicaciones interactivas construidas con estándares de
-          nivel de producción.
+          Aquí encontrarás una selección de mis proyectos más destacados.
         </p>
 
         <!-- Category Filters -->
         <div class="filter-container">
           <button class="filter-btn active" data-filter="all">TODOS</button>
           <button class="filter-btn" data-filter="fullstack">FULLSTACK</button>
-          <button class="filter-btn" data-filter="frontend">FRONTEND &amp; 3D</button>
-          <button class="filter-btn" data-filter="uiux">DISEÑO UI/UX</button>
+          <button class="filter-btn" data-filter="frontend">FRONTEND</button>
+          <button class="filter-btn" data-filter="mobile">MÓVIL</button>
         </div>
 
         <div class="projects-grid">
@@ -451,28 +424,26 @@
           </article>
 
           <!-- Proyecto 3: Neuralync CyberStore -->
-          <article class="cyber-card project-card" data-category="uiux" data-live="https://neuralync-store.example.com"
-            data-github="https://github.com/pablofns/neuralync-cyberstore"
-            data-highlights="Diseño integral de sistema UI/UX creado en Figma y trasladado a código pixel-perfect|Carrito de compras reactivo con persistencia local y micro-animaciones hápticas|Puntuación perfecta de 100/100 en accesibilidad web (WCAG AA)">
+          <article class="cyber-card project-card" data-category="mobile" data-live=""
+            data-github="https://github.com/pablofns/Capi-soft"
+            data-highlights="Diseño integral de sistema mobile para la auto-gestión de clientes, stock y servicios prestados para empresa de mantenimiento de Pilates Reformer">
             <div class="project-preview">
-              <img src="assets/projects/project3.jpg" alt="Preview de Neuralync CyberStore" class="project-img"
-                loading="lazy">
+              <img src="assets/projects/project3.jpg" alt="Preview de Capi-soft" class="project-img" loading="lazy">
               <div class="project-overlay">
-                <span class="project-category-tag">UI/UX &amp; E-COMMERCE</span>
+                <span class="project-category-tag">UI/UX &amp; MOBILE</span>
               </div>
             </div>
             <div class="project-body">
-              <h3 class="project-title">Neuralync CyberStore</h3>
+              <h3 class="project-title">Capi-soft</h3>
               <p class="project-description">
-                E-commerce conceptual de tecnología cibernética y computación cuántica. Interfaz de usuario con estética
-                neón esmeralda y experiencia de checkout ultra optimizada.
+                Sistema mobile para la auto-gestión de clientes, stock y servicios prestados para empresa de
+                mantenimiento de Pilates Reformer.
               </p>
               <div class="project-tech-stack">
-                <span class="tech-badge badge-emerald">Figma UI/UX</span>
-                <span class="tech-badge badge-cyan">Next.js</span>
-                <span class="tech-badge">Stripe API</span>
-                <span class="tech-badge">Framer Motion</span>
-                <span class="tech-badge">Zustand</span>
+                <span class="tech-badge badge-cyan">React.js</span>
+                <span class="tech-badge">Typescript</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">PostgreSQL</span>
               </div>
               <div class="project-links">
                 <a href="https://neuralync-store.example.com" target="_blank" rel="noopener noreferrer"
@@ -527,37 +498,21 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">JavaScript (ES6+) / TypeScript</span>
-                  <span class="skill-pct">95%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-width="95%"></div>
                 </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">React / Next.js</span>
-                  <span class="skill-pct">92%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-width="92%"></div>
                 </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">HTML5 Semántico &amp; CSS3 Moderno</span>
-                  <span class="skill-pct">98%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-width="98%"></div>
                 </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Three.js / WebGL / Canvas</span>
-                  <span class="skill-pct">82%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-width="82%"></div>
                 </div>
               </div>
             </div>
@@ -578,37 +533,21 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Node.js / Express</span>
-                  <span class="skill-pct">88%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-width="88%"></div>
                 </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">PostgreSQL / MongoDB</span>
-                  <span class="skill-pct">84%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-width="84%"></div>
                 </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">RESTful APIs &amp; GraphQL</span>
-                  <span class="skill-pct">90%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-width="90%"></div>
                 </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Arquitectura de Microservicios</span>
-                  <span class="skill-pct">80%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-width="80%"></div>
                 </div>
               </div>
             </div>
@@ -626,25 +565,16 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Figma &amp; Design Systems</span>
-                  <span class="skill-pct">94%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-width="94%"></div>
                 </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Git / GitHub Actions CI/CD</span>
-                  <span class="skill-pct">89%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-width="89%"></div>
                 </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Docker &amp; Cloud (AWS/Vercel)</span>
-                  <span class="skill-pct">82%</span>
                 </div>
                 <div class="skill-bar-bg">
                   <div class="skill-bar-fill" data-width="82%"></div>
@@ -653,10 +583,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Performance &amp; Core Web Vitals</span>
-                  <span class="skill-pct">96%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-width="96%"></div>
                 </div>
               </div>
             </div>
@@ -676,21 +602,20 @@
         <div class="about-grid">
           <div class="about-content">
             <p class="about-text">
-              Soy un desarrollador y diseñador web apasionado por construir puentes entre la ingeniería de sistemas y
-              las bellas artes visuales. Entiendo el código no solo como instrucciones lógicas, sino como un lienzo
-              digital capaz de emocionar y resolver problemas comerciales reales.
+              Desarrollador Software Fullstack & Frontend Specialist con casi 10 años de experiencia diseñando y
+              construyendo soluciones web tanto en el sector público como privado. Mi enfoque principal está en la
+              creación de interfaces intuitivas, escalables y orientadas a brindar la mejor experiencia al usuario.
+              A lo largo de mi trayectoria he colaborado en equipos multidisciplinarios para implementar sistemas de
+              alto impacto real e inmediato. Cuento con una sólida capacidad de adaptación técnica, abarcando desde el
+              maquetado y lógica frontend hasta el desarrollo backend, gestión de bases de datos y configuración de
+              servidores.
             </p>
             <p class="about-text">
-              Mi experiencia abarca desde el desarrollo de SPAs de alto tráfico y arquitecturas distribuidas hasta el
-              diseño milimétrico de identidades digitales y aplicaciones interactivas en 3D.
+              Frontend: React.js, JavaScript (ES6+), HTML5, CSS3/Sass. | Backend & Bases de Datos: Node.js, PHP |
+              MariaDB, SQL Server, PostgreSQL. | Herramientas & DevOps: Git, GitHub, Nginx, Linux.
             </p>
 
             <div class="about-features">
-              <div class="about-feature-item">
-                <h4 class="about-feature-title" style="color: var(--neon-cyan);">Orientado a Resultados</h4>
-                <p class="about-feature-desc">Diseños concebidos para optimizar tasas de conversión y maximizar
-                  retención de usuario.</p>
-              </div>
               <div class="about-feature-item">
                 <h4 class="about-feature-title" style="color: var(--neon-purple);">Código Mantenible</h4>
                 <p class="about-feature-desc">Estructuras modulares, estándares limpios (SOLID) y documentación técnica
@@ -703,31 +628,42 @@
           <div class="timeline">
             <div class="timeline-item">
               <span class="timeline-dot"></span>
-              <div class="timeline-date">2023 - PRESENTE</div>
-              <h3 class="timeline-title">Lead Frontend &amp; UI Architect</h3>
-              <div class="timeline-company">Nexus Digital Labs</div>
-              <p class="timeline-desc">Liderazgo de desarrollo para productos SaaS de analítica en tiempo real y
-                modernización de interfaces complejas.</p>
+              <div class="timeline-date">2025 - PRESENTE</div>
+              <h3 class="timeline-title">Fullstack Developer</h3>
+              <div class="timeline-company">Ministerio de Salud de la Provincia de Entre Ríos</div>
+              <p class="timeline-desc">Desarrollo de aplicaciones web especializadas para la salud pública.</p>
             </div>
 
             <div class="timeline-item">
               <span class="timeline-dot"
                 style="background: var(--neon-purple); box-shadow: 0 0 12px var(--neon-purple);"></span>
-              <div class="timeline-date">2021 - 2023</div>
-              <h3 class="timeline-title">Senior Fullstack Developer</h3>
-              <div class="timeline-company">Quantum Media Interactive</div>
-              <p class="timeline-desc">Desarrollo de portales web interactivos, microservicios en Node.js y optimización
-                de rendimiento a escala global.</p>
+              <div class="timeline-date">2021 - 2025</div>
+              <h3 class="timeline-title">Semi-Senior Frontend Developer</h3>
+              <div class="timeline-company">Mercado Libre S.R.L.</div>
+              <p class="timeline-desc">Colaboración en equipos de alto rendimiento en el desarrollo y mantenimiento de
+                la plataforma de comercio electrónico más grande de Latinoamérica. Contribuí al desarrollo de
+                interfaces escalables, optimización de componentes React y mejora de la experiencia del usuario en
+                el ecosistema de ML.</p>
             </div>
 
             <div class="timeline-item">
               <span class="timeline-dot"
                 style="background: var(--neon-emerald); box-shadow: 0 0 12px var(--neon-emerald);"></span>
-              <div class="timeline-date">2019 - 2021</div>
-              <h3 class="timeline-title">Diseñador Web &amp; Frontend</h3>
-              <div class="timeline-company">Freelance / Proyectos Propios</div>
-              <p class="timeline-desc">Creación de marcas digitales, tiendas virtuales y experiencias personalizadas
-                para startups y clientes internacionales.</p>
+              <div class="timeline-date">2017 - 2021</div>
+              <h3 class="timeline-title">Freelance Web Designer &amp; Junior Developer</h3>
+              <div class="timeline-company">Autónomo</div>
+              <p class="timeline-desc">Diseño y desarrollo de páginas web para clientes locales y PyMEs.</p>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-dot"
+                style="background: var(--neon-emerald); box-shadow: 0 0 12px var(--neon-emerald);"></span>
+              <div class="timeline-date">2017 - 2021</div>
+              <h3 class="timeline-title">Desarrollador fullstack & Mobile</h3>
+              <div class="timeline-company">Consejo de Educación de la provincia de Entre Ríos</div>
+              <p class="timeline-desc">Desarrollo de herramientas para la gestión del personal docente y administrativo
+                del sistema educativo de la provincia de Entre Ríos, con enfoque en la automatización de procesos y la
+                mejora de la experiencia del usuario.</p>
             </div>
           </div>
         </div>
@@ -735,15 +671,14 @@
     </section>
 
     <!-- ======================================================================
-         Contact Section ("Establish Uplink")
+         Contact Section
          ====================================================================== -->
     <section id="contacto" class="section">
       <div class="container">
-        <div class="section-tag">CONECTIVIDAD // CONTACTO DIRECTO</div>
-        <h2 class="section-title">Establecer <span class="gradient-text">Uplink</span></h2>
+        <div class="section-tag">CONTACTO</div>
+        <h2 class="section-title">Establecer <span class="gradient-text">contacto</span></h2>
         <p class="section-subtitle">
-          ¿Tienes un proyecto ambicioso, una vacante para tu equipo o buscas asesoría técnica? Iniciemos una
-          conversación.
+          ¿Tienes un proyecto que quieras desarrollar? Iniciemos una conversación.
         </p>
 
         <div class="contact-grid">
@@ -762,7 +697,8 @@
               </div>
             </a>
 
-            <a href="https://linkedin.com/in/pablofns" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <a href="https://linkedin.com/in/pablo-fenes" target="_blank" rel="noopener noreferrer"
+              class="contact-item">
               <div class="contact-icon"
                 style="background: var(--neon-purple-subtle); border-color: rgba(157, 78, 221, 0.4); color: var(--neon-purple);">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -773,7 +709,7 @@
               </div>
               <div class="contact-meta">
                 <h4>LinkedIn Profesional</h4>
-                <p>linkedin.com/in/pablofns</p>
+                <p>linkedin.com/in/pablo-fenes</p>
               </div>
             </a>
 
@@ -793,19 +729,11 @@
             </a>
 
             <div class="social-links">
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="social-btn"
+              <a href="https://wa.me/3434570952" target="_blank" rel="noopener noreferrer" class="social-btn"
                 title="WhatsApp Directo" aria-label="WhatsApp">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path
                     d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
-                  </path>
-                </svg>
-              </a>
-              <a href="https://x.com/pablofns" target="_blank" rel="noopener noreferrer" class="social-btn"
-                title="Twitter / X" aria-label="X (Twitter)">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
                   </path>
                 </svg>
               </a>
