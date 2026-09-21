@@ -1,0 +1,61 @@
+:root {
+  /* Paleta Base Futurista */
+  --bg-dark: #07090e;
+  --bg-surface: #0c1017;
+  --bg-surface-elevated: #121824;
+  --bg-glass: rgba(12, 16, 23, 0.7);
+  --bg-glass-strong: rgba(18, 24, 36, 0.85);
+
+  /* Acentos Neón Sci-Fi */
+  --neon-cyan: #00f0ff;
+  --neon-cyan-glow: rgba(0, 240, 255, 0.4);
+  --neon-cyan-subtle: rgba(0, 240, 255, 0.12);
+
+  --neon-purple: #9d4edd;
+  --neon-purple-glow: rgba(157, 78, 221, 0.4);
+  --neon-purple-subtle: rgba(157, 78, 221, 0.15);
+
+  --neon-emerald: #10b981;
+  --neon-emerald-glow: rgba(16, 185, 129, 0.4);
+  --neon-emerald-subtle: rgba(16, 185, 129, 0.15);
+
+  --neon-pink: #ff2a85;
+  --neon-pink-glow: rgba(255, 42, 133, 0.4);
+
+  /* Gradientes Dinámicos */
+  --grad-cyan-purple: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-purple) 100%);
+  --grad-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+  --grad-glow: radial-gradient(circle, var(--neon-cyan-glow) 0%, transparent 70%);
+
+  /* Bordes & Glassmorphism */
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-glass-bright: rgba(0, 240, 255, 0.35);
+  --border-glass-purple: rgba(157, 78, 221, 0.35);
+  --blur-glass: blur(14px);
+
+  /* Textos y Contraste */
+  --text-main: #f0f4f8;
+  --text-muted: #8c9ba5;
+  --text-dim: #52606d;
+  --text-highlight: #ffffff;
+
+  /* Tipografías */
+  --font-display: 'Orbitron', -apple-system, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-code: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Espaciado y Layout */
+  --container-max: 1200px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-cyber: 4px;
+
+  /* Transiciones & Easing */
+  --ease-cyber: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-fast: 0.2s var(--ease-cyber);
+  --transition-normal: 0.35s var(--ease-cyber);
+  --transition-smooth: 0.6s var(--ease-cyber);
+}
