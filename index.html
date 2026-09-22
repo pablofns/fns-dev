@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pablo | Programador & Diseñador Web</title>
+  <title>FNS.DEV | Programación & Diseño Web</title>
   <meta name="description"
     content="Portfolio profesional de Pablo - Programador & Diseñador Web. Especialista en arquitecturas de alto rendimiento, experiencias visuales inmersivas y diseño futurista.">
   <meta name="keywords"
@@ -59,7 +59,7 @@
     <nav class="hud-nav" aria-label="Navegación principal">
       <a href="#hero" class="hud-logo" id="logo-link">
         <img src="assets/logos/logo.svg" alt="FNS.DEV Logo" class="hud-logo-icon">
-        <span>PABLOFNS<span style="color: var(--neon-cyan)">.DEV</span></span>
+        <span>FNS<span style="color: var(--neon-cyan)">.DEV</span></span>
       </a>
 
       <ul class="hud-links">
@@ -736,26 +736,29 @@
           <!-- Interactive Uplink Form -->
           <div class="cyber-card contact-form-card">
             <form id="uplink-form">
+              <!-- Honeypot anti-spam -->
+              <input type="text" name="_honey" style="display:none">
+
               <div class="form-group">
                 <label for="form-name" class="form-label">Nombre / Empresa</label>
-                <input type="text" id="form-name" class="form-input" placeholder="Tu nombre o el de tu organización"
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="Tu nombre o el de tu organización"
                   required>
               </div>
 
               <div class="form-group">
                 <label for="form-email" class="form-label">Email de Retorno</label>
-                <input type="email" id="form-email" class="form-input" placeholder="tu.correo@ejemplo.com" required>
+                <input type="email" id="form-email" name="email" class="form-input" placeholder="tu.correo@ejemplo.com" required>
               </div>
 
               <div class="form-group">
                 <label for="form-subject" class="form-label">Tipo de Consulta</label>
-                <input type="text" id="form-subject" class="form-input"
+                <input type="text" id="form-subject" name="subject" class="form-input"
                   placeholder="Contratación / Proyecto Freelance / Colaboración">
               </div>
 
               <div class="form-group">
                 <label for="form-message" class="form-label">Mensaje / Requerimientos</label>
-                <textarea id="form-message" class="form-textarea"
+                <textarea id="form-message" name="message" class="form-textarea"
                   placeholder="Describe los objetivos de tu proyecto o detalles del puesto..." required></textarea>
               </div>
 

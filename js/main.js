@@ -95,17 +95,29 @@ document.addEventListener('DOMContentLoaded', () => {
   skillBars.forEach(bar => skillObserver.observe(bar));
 
   // ---------------------------------------------------------------------------
-  // Terminal Simulation Uplink Contact Form
+  // Terminal Uplink Contact Form (FormSubmit.co API Integration)
   // ---------------------------------------------------------------------------
   const contactForm = document.getElementById('uplink-form');
   const terminalOutput = document.getElementById('uplink-status-output');
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('form-name')?.value || 'Guest';
+      const nameInput = document.getElementById('form-name');
+      const emailInput = document.getElementById('form-email');
+      const subjectInput = document.getElementById('form-subject');
+      const messageInput = document.getElementById('form-message');
       const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+      const name = nameInput?.value.trim() || 'Visitante';
+      const email = emailInput?.value.trim() || '';
+      const subject = subjectInput?.value.trim() || 'Consulta General';
+      const message = messageInput?.value.trim() || '';
+
+      const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+      const originalBtnBg = submitBtn ? submitBtn.style.background : '';
+      const originalBtnShadow = submitBtn ? submitBtn.style.boxShadow : '';
 
       if (submitBtn) {
         submitBtn.disabled = true;
@@ -129,12 +141,40 @@ document.addEventListener('DOMContentLoaded', () => {
         terminalOutput.innerHTML = `
           <p class="terminal-line"><span class="terminal-prompt">&gt;</span> [SYN] Inicializando handshake cuántico...</p>
           <p class="terminal-line"><span class="terminal-prompt">&gt;</span> [ACK] Cifrando paquete de datos (AES-256)...</p>
+          <p class="terminal-line"><span class="terminal-prompt">&gt;</span> [NET] Estableciendo uplink con el servidor de correo...</p>
         `;
+      }
 
-        setTimeout(() => {
-          terminalOutput.innerHTML += `
-            <p class="terminal-line" style="color: var(--neon-emerald);"><span class="terminal-prompt">&gt;</span> [STATUS 200] Uplink completado. ¡Mensaje recibido, ${name}! Responderé a la brevedad.</p>
-          `;
+      try {
+        const payload = {
+          name: name,
+          email: email,
+          subject: subject,
+          message: message,
+          _subject: `[Portfolio FNS.DEV] Nuevo mensaje de ${name}: ${subject}`,
+          _template: 'table',
+          _captcha: 'false'
+        };
+
+        const response = await fetch('https://formsubmit.co/ajax/pablofns@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (response.ok && (result.success === 'true' || result.success === true || response.status === 200)) {
+          if (terminalOutput) {
+            terminalOutput.innerHTML += `
+              <p class="terminal-line" style="color: var(--neon-emerald);"><span class="terminal-prompt">&gt;</span> [STATUS 200] Uplink completado con éxito. ¡Mensaje recibido y transmitido a la casilla de Pablo (${name})!</p>
+              <p class="terminal-line" style="color: var(--text-muted);"><span class="terminal-prompt">&gt;</span> [ACK] Copia de confirmación en camino a ${email}. Responderé a la brevedad.</p>
+            `;
+          }
+
           if (window.cyberAudio) window.cyberAudio.playSuccess();
 
           if (submitBtn) {
@@ -149,7 +189,49 @@ document.addEventListener('DOMContentLoaded', () => {
           }
 
           contactForm.reset();
-        }, 1200);
+
+          // Restaurar botón después de 6 segundos
+          setTimeout(() => {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnHTML;
+              submitBtn.style.background = originalBtnBg;
+              submitBtn.style.boxShadow = originalBtnShadow;
+            }
+          }, 6000);
+
+        } else {
+          throw new Error(result.message || 'El servidor devolvió un estado no satisfactorio');
+        }
+      } catch (error) {
+        console.error('Error al enviar mensaje:', error);
+
+        if (terminalOutput) {
+          terminalOutput.innerHTML += `
+            <p class="terminal-line" style="color: var(--neon-pink);"><span class="terminal-prompt">&gt;</span> [ERROR] Fallo de enlace: ${error.message || 'Error en la conexión'}.</p>
+            <p class="terminal-line" style="color: var(--neon-cyan);"><span class="terminal-prompt">&gt;</span> [FALLBACK] Puedes escribir directamente a: <a href="mailto:pablofns@gmail.com" style="color: var(--neon-cyan); text-decoration: underline;">pablofns@gmail.com</a></p>
+          `;
+        }
+
+        if (submitBtn) {
+          submitBtn.innerHTML = `
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="15" y1="9" x2="9" y2="15"></line>
+              <line x1="9" y1="9" x2="15" y2="15"></line>
+            </svg>
+            REINTENTAR ENVÍO
+          `;
+          submitBtn.style.background = 'rgba(255, 0, 85, 0.3)';
+          submitBtn.style.boxShadow = '0 0 15px rgba(255, 0, 85, 0.5)';
+          submitBtn.disabled = false;
+
+          setTimeout(() => {
+            submitBtn.innerHTML = originalBtnHTML;
+            submitBtn.style.background = originalBtnBg;
+            submitBtn.style.boxShadow = originalBtnShadow;
+          }, 5000);
+        }
       }
     });
   }
