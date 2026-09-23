@@ -61,8 +61,22 @@
       if (modalTitle) modalTitle.textContent = title;
       if (modalCategory) modalCategory.textContent = category;
       if (modalDesc) modalDesc.textContent = desc;
-      if (modalLiveLink) modalLiveLink.href = liveUrl;
-      if (modalCodeLink) modalCodeLink.href = codeUrl;
+      if (modalLiveLink) {
+        if (!liveUrl || liveUrl === '#' || liveUrl.trim() === '') {
+          modalLiveLink.style.display = 'none';
+        } else {
+          modalLiveLink.style.display = 'inline-flex';
+          modalLiveLink.href = liveUrl;
+        }
+      }
+      if (modalCodeLink) {
+        if (!codeUrl || codeUrl === '#' || codeUrl.trim() === '') {
+          modalCodeLink.style.display = 'none';
+        } else {
+          modalCodeLink.style.display = 'inline-flex';
+          modalCodeLink.href = codeUrl;
+        }
+      }
 
       if (modalStack) {
         modalStack.innerHTML = '';
@@ -79,6 +93,7 @@
       if (modalBackdrop) {
         modalBackdrop.classList.add('active');
         document.body.style.overflow = 'hidden';
+        document.body.classList.add('modal-open');
       }
     });
   });
@@ -87,6 +102,7 @@
     if (modalBackdrop) {
       modalBackdrop.classList.remove('active');
       document.body.style.overflow = '';
+      document.body.classList.remove('modal-open');
     }
   }
 

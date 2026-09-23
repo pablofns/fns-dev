@@ -32,11 +32,17 @@
     }
     updateRing();
 
-    // Hover detection for buttons, links and cards
-    const interactives = document.querySelectorAll('a, button, input, textarea, .cyber-card, .filter-btn');
-    interactives.forEach(el => {
-      el.addEventListener('mouseenter', () => cursorRing.classList.add('cursor-hover'));
-      el.addEventListener('mouseleave', () => cursorRing.classList.remove('cursor-hover'));
+    // Hover detection for buttons, links, cards and modal elements
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.closest('a, button, input, textarea, .cyber-card, .filter-btn, .modal-close-btn, [role="button"]')) {
+        cursorRing.classList.add('cursor-hover');
+      }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+      if (e.target.closest('a, button, input, textarea, .cyber-card, .filter-btn, .modal-close-btn, [role="button"]')) {
+        cursorRing.classList.remove('cursor-hover');
+      }
     });
   }
 

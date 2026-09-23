@@ -468,3 +468,33 @@
   transform: rotate(90deg);
   box-shadow: 0 0 15px var(--neon-cyan-glow);
 }
+
+/* Modal cursor visibility & interaction fix */
+.modal-backdrop.active,
+.modal-backdrop.active *,
+body.modal-open,
+body.modal-open * {
+  cursor: default !important;
+}
+
+.modal-backdrop.active a,
+.modal-backdrop.active button,
+.modal-backdrop.active .cyber-btn,
+.modal-backdrop.active .modal-close-btn,
+.modal-backdrop.active [role="button"],
+body.modal-open a,
+body.modal-open button,
+body.modal-open .cyber-btn,
+body.modal-open .modal-close-btn,
+body.modal-open [role="button"] {
+  cursor: pointer !important;
+}
+
+body.modal-open .custom-cursor-dot,
+body.modal-open .custom-cursor-ring,
+body:has(.modal-backdrop.active) .custom-cursor-dot,
+body:has(.modal-backdrop.active) .custom-cursor-ring {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
